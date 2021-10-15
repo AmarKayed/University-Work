@@ -60,17 +60,22 @@ binomial n k
     | n == 0 = 0
     | otherwise =  binomial(n-1) (k) + binomial (n-1) (k-1)
 
-
 -- Lists
 -- Ex.6 a)
 verifL:: [Integer] -> Bool
 verifL x = if mod (length x) 2 == 0 then True
     else False
 
---Ex.6 b)
-
+-- Ex.6 b)
+{-
 takeFinal:: [Int]->Int->[Int]
 takeFinal list n = if length(list) < n then list
     else drop (length(list) - n) list
+-}
 
+-- Ex.6 BONUS
+takeFinal:: [Char]->Int->[Char]
+takeFinal list n = if length(list) < n then list
+    else drop (length(list) - n) list
 
+-- Ex.7
