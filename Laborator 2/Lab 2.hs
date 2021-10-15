@@ -78,4 +78,9 @@ takeFinal:: [Char]->Int->[Char]
 takeFinal list n = if length(list) < n then list
     else drop (length(list) - n) list
 
+-- Ex.6.c)
+
+remove::[Int]->Int->[Int]
+remove lista n = concat(take((n-1) lista) drop ((length(lista) - n) (lista)))
+
 -- Ex.7
