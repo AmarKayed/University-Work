@@ -28,7 +28,7 @@ fizzbuzz x
     | otherwise = ""
 
 -- Recursion
--- Ex.5
+-- Ex.4
 
 tribonacci:: Integer -> Integer
 tribonacci n = if n == 1 then 1
@@ -36,3 +36,26 @@ tribonacci n = if n == 1 then 1
     else if n == 3 then 2
     else tribonacci(n-1) + tribonacci(n-2) + tribonacci(n-3)
 
+-- Ex.5
+{-
+binomial:: Integer->Integer->Integer
+binomial n k = if n == 0 && k == 0 then 1
+    else if n == 0 then 0
+    else if k == 0 then 1
+    else binomial(n-1) (k) + binomial (n-1) (k-1)
+-}
+
+{-
+-- Professor:
+
+binomial:: Integer->Integer->Integer
+binomial n k = if k == 0 then 1
+    else if n == 0 then 0
+    else binomial(n-1) (k) + binomial (n-1) (k-1)
+
+-}
+binomial:: Integer->Integer->Integer
+binomial n k 
+    | k == 0 = 1
+    | n == 0 = 0
+    | otherwise =  binomial(n-1) (k) + binomial (n-1) (k-1)
