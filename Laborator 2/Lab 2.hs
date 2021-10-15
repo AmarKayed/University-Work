@@ -62,9 +62,15 @@ binomial n k
 
 
 -- Lists
--- Ex.6
-
+-- Ex.6 a)
 verifL:: [Integer] -> Bool
 verifL x = if mod (length x) 2 == 0 then True
     else False
+
+--Ex.6 b)
+
+takeFinal:: [Int]->Int->[Int]
+takeFinal list n = if length(list) < n then list
+    else drop (length(list) - n) list
+
 
