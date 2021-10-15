@@ -59,3 +59,12 @@ binomial n k
     | k == 0 = 1
     | n == 0 = 0
     | otherwise =  binomial(n-1) (k) + binomial (n-1) (k-1)
+
+
+-- Lists
+-- Ex.6
+
+verifL:: [Integer] -> Bool
+verifL x = if mod (length x) 2 == 0 then True
+    else False
+
