@@ -26,3 +26,13 @@ fizzbuzz x
     | mod x 3 == 0 = "Fizz"
     | mod x 5 == 0 = "Buzz"
     | otherwise = ""
+
+-- Recursion
+-- Ex.5
+
+tribonacci:: Integer -> Integer
+tribonacci n = if n == 1 then 1
+    else if n == 2 then 1
+    else if n == 3 then 2
+    else tribonacci(n-1) + tribonacci(n-2) + tribonacci(n-3)
+
